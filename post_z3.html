@@ -1,0 +1,2023 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neha Kumari - Portfolio</title>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* --- CSS Variables (Theme) --- */
+        :root {
+            --primary-color: #0A1931; /* Navy Blue */
+            --secondary-color: #008080; /* Teal */
+            --text-color: #333;
+            --bg-color: #f4f4f4;
+            --white-color: #ffffff;
+            --light-gray: #e0e0e0;
+            --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease-in-out;
+        }
+
+        /* --- Global Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        /* --- Navigation --- */
+        .navbar {
+            background: transparent;
+            box-shadow: none;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            transition: background-color 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white-color);
+            text-decoration: none;
+        }
+
+        .navbar .nav-menu {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        .navbar .nav-item {
+            margin: 0 1rem;
+        }
+
+        .navbar .nav-link {
+            color: var(--white-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .navbar .nav-link:hover {
+            color: var(--secondary-color);
+        }
+
+        .navbar .nav-resume-btn {
+            background-color: var(--secondary-color);
+            color: var(--white-color);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .navbar .nav-resume-btn:hover {
+            background-color: #006666;
+            transform: translateY(-2px);
+            color: var(--white-color);
+        }
+
+        .navbar .nav-item:last-child {
+            margin-left: auto;
+        }
+
+        .hidden {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-20px);
+        }
+
+        #nav-resume-item {
+            transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            background-color: var(--white-color);
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            background-color: var(--white-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar.scrolled .logo {
+            color: var(--primary-color);
+        }
+
+        .navbar.scrolled .nav-link {
+            color: var(--text-color);
+        }
+
+        .navbar.scrolled .bar {
+            background-color: var(--primary-color);
+        }
+
+        /* --- Hero Section --- */
+        #home {
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to right, rgba(10, 25, 49, 0.8), rgba(10, 25, 49, 0.8)), url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1269&q=80') no-repeat center center/cover;
+            color: var(--white-color);
+            text-align: left;
+        }
+
+        #home .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--secondary-color);
+            color: var(--white-color);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: var(--transition);
+            margin: 0.5rem;
+        }
+
+        .btn:hover {
+            background: #006666;
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--white-color);
+        }
+
+        .btn-outline:hover {
+            background: var(--white-color);
+            color: var(--primary-color);
+        }
+
+        .hero-image {
+            flex: 0 0 40%;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 350px;
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            border: 5px solid var(--secondary-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.4s ease, box-shadow 0.4s ease, animation-play-state 0.4s;
+        }
+
+        @keyframes float-animation {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes glow-animation {
+            0% { box-shadow: 0 0 20px rgba(0, 128, 128, 0.5), 0 0 40px rgba(0, 128, 128, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(0, 128, 128, 0.8), 0 0 60px rgba(0, 128, 128, 0.5); }
+            100% { box-shadow: 0 0 20px rgba(0, 128, 128, 0.5), 0 0 40px rgba(0, 128, 128, 0.3); }
+        }
+
+        .hero-image img {
+            animation: float-animation 6s ease-in-out infinite, glow-animation 4s ease-in-out infinite;
+        }
+
+        .hero-image img:hover {
+            animation-play-state: paused;
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(0, 128, 128, 0.6);
+        }
+
+        .hero-social-links {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .hero-social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            color: var(--white-color);
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .hero-social-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-5px);
+            border-color: var(--secondary-color);
+        }
+
+        /* --- About Section --- */
+        #about .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .about-left {
+            text-align: center;
+        }
+
+        .about-img {
+            max-width: 250px;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-info-card {
+            background-color: var(--white-color);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+            text-align: left;
+        }
+
+        .about-info-card ul {
+            list-style: none;
+        }
+
+        .about-info-card li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .about-info-card li i {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            width: 25px;
+            margin-right: 1rem;
+        }
+
+        .about-right h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-right p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* --- Education Section --- */
+        #education .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .education-card {
+            background: var(--white-color);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .education-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .education-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+        }
+
+        .education-details h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .education-details p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .education-details .date {
+            font-weight: 500;
+            color: var(--secondary-color);
+        }
+
+        .education-details .status {
+            display: inline-block;
+            margin-top: 0.5rem;
+            padding: 0.25rem 0.75rem;
+            background-color: #e9ecef;
+            color: #495057;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* --- Experience Section --- */
+        #experience .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        #experience .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--secondary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        .experience-card {
+            position: relative;
+            background-color: var(--white-color);
+            width: 50%;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .experience-card::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--white-color);
+            border: 4px solid var(--secondary-color);
+            top: 25px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .right::after {
+            left: -10px;
+        }
+
+        .experience-card h3 {
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .experience-card .company {
+            font-style: italic;
+            color: #555;
+        }
+
+        .experience-card .date {
+            color: var(--secondary-color);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-card ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-top: 1rem;
+        }
+
+        .experience-card li {
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-card .view-docs-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--secondary-color);
+            color: var(--white-color);
+            border: none;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .experience-card .view-docs-btn:hover {
+            background-color: #006666;
+            transform: translateY(-3px);
+        }
+
+        /* Employment Type Badge Styles */
+        .employment-type-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-full-time {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .badge-part-time {
+            background-color: #e3f2fd;
+            color: #1565c0;
+        }
+
+        .badge-internship {
+            background-color: #fff8e1;
+            color: #ff8f00;
+        }
+
+        .badge-freelance {
+            background-color: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .badge-self-employed {
+            background-color: #e0f2f1;
+            color: #00695c;
+        }
+
+        /* --- Skills Section --- */
+        #skills .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category-card {
+            background: var(--white-color);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+        }
+
+        .skill-category-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .skill-category-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .skills-badges-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+        }
+
+        .skill-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: #f0f0f0;
+            color: #555;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .skill-badge i {
+            font-size: 1.2rem;
+        }
+
+        .skill-badge:hover {
+            background-color: var(--secondary-color);
+            color: var(--white-color);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 128, 128, 0.3);
+        }
+
+        /* --- Certificates Section --- */
+        #certificates .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .certificate-card {
+            background: var(--white-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .certificate-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #e9e9e9;
+        }
+
+        .certificate-info {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .certificate-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .certificate-info p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.25rem;
+        }
+
+        .certificate-info .credential-link {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: auto;
+            align-self: flex-start;
+        }
+
+        .certificate-info .credential-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Projects Section --- */
+        #projects .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--white-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-info {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-info p {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .project-tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: auto;
+            margin-bottom: 1rem;
+        }
+
+        .tech-badge {
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .tech-badge:hover {
+            background-color: var(--secondary-color);
+            color: var(--white-color);
+            cursor: default;
+        }
+
+        .project-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+            margin-right: 1rem;
+        }
+
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Contact Section --- */
+        #contact {
+            background: var(--primary-color);
+            color: var(--white-color);
+            text-align: center;
+        }
+
+        #contact h2 {
+            color: var(--white-color);
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Footer --- */
+        .footer {
+            background: #061119;
+            color: var(--white-color);
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        
+        /* --- Modals --- */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: var(--white-color);
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 90%;
+            max-width: 1200px;
+            height: auto;
+            max-height: 95vh;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            transform: scale(0.7);
+            transition: transform 0.3s ease;
+        }
+
+        .modal.show .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-header {
+            padding: 1rem 1.5rem; 
+            border-bottom: 1px solid var(--light-gray);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .close-modal-btn {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .close-modal-btn:hover,
+        .close-modal-btn:focus {
+            color: var(--text-color);
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: auto;
+        }
+
+        /* Certificate Modal Specific Styles */
+        .certificate-modal-content {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            gap: 2rem;
+        }
+
+        .certificate-image-container {
+            flex: 1.2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            padding: 1.5rem;
+            max-height: 75vh;
+            overflow: hidden;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .certificate-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 5px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .certificate-image-container img:hover {
+            transform: scale(1.02);
+        }
+
+        .certificate-info-container {
+            flex: 0.8;
+            display: flex;
+            flex-direction: column;
+            padding: 0.5rem;
+        }
+
+        .certificate-info-container h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            line-height: 1.3;
+        }
+
+        .certificate-info-container p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .certificate-info-container strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background-color: var(--secondary-color);
+            color: var(--white-color);
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 2rem;
+            align-self: flex-start;
+            box-shadow: 0 4px 10px rgba(0, 128, 128, 0.3);
+        }
+
+        .download-btn:hover {
+            background-color: #006666;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 128, 128, 0.4);
+        }
+
+        /* Experience Documents Modal Styles */
+        .experience-docs-modal-content {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .docs-tabs {
+            display: flex;
+            border-bottom: 1px solid var(--light-gray);
+            margin-bottom: 1rem;
+        }
+
+        .doc-tab {
+            padding: 0.75rem 1.5rem;
+            background-color: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-color);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .doc-tab.active {
+            color: var(--secondary-color);
+            border-bottom-color: var(--secondary-color);
+        }
+
+        .doc-content {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            padding: 1rem;
+        }
+
+        .doc-content.active {
+            display: flex;
+        }
+
+        .doc-pdf-container {
+            width: 100%;
+            height: 70vh;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .doc-pdf-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .doc-fallback {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 70vh;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
+        }
+
+        .doc-fallback i {
+            font-size: 4rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .doc-fallback p {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .doc-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        /* --- Scroll to Top Button --- */
+        #scroll-to-top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--secondary-color);
+            color: var(--white-color);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+            z-index: 999;
+        }
+
+        #scroll-to-top-btn:hover {
+            background-color: #006666;
+            transform: translateY(-5px);
+        }
+
+        #scroll-to-top-btn.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        /* --- Scroll Reveal Animation --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 1s all ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            h2 { font-size: 2rem; }
+            .hero-content h1 { font-size: 2.5rem; }
+
+            .navbar .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: var(--white-color);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                padding: 2rem 0;
+            }
+
+            .navbar .nav-menu.active {
+                left: 0;
+            }
+
+            .navbar .nav-item {
+                margin: 1rem 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+
+            #home .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-content {
+                order: 2;
+            }
+            .hero-image {
+                order: 1;
+                flex: 0 0 auto;
+                margin-bottom: 2rem;
+            }
+            .hero-image img {
+                max-width: 250px;
+            }
+
+            #about .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+            
+            #experience .timeline::after {
+                left: 31px;
+            }
+            .experience-card {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .experience-card::before {
+                content: ' ';
+                height: 0;
+                position: absolute;
+                top: 22px;
+                width: 0;
+                z-index: 1;
+                right: 0;
+                border: medium solid var(--white-color);
+                border-width: 10px 0 10px 10px;
+            }
+            .left::after, .right::after {
+                left: 21px;
+            }
+            .right {
+                left: 0%;
+            }
+
+            /* Modal responsive adjustments */
+            .modal-content {
+                width: 95%;
+                height: auto;
+                max-height: 95vh;
+            }
+
+            .certificate-modal-content {
+                flex-direction: column;
+            }
+
+            .certificate-info-container h3 {
+                font-size: 1.5rem;
+            }
+
+            .certificate-info-container p {
+                font-size: 1rem;
+            }
+
+            .experience-docs-modal-content {
+                padding: 1rem;
+            }
+
+            .doc-tab {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .doc-pdf-container {
+                height: 60vh;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- --- Navigation --- -->
+    <header class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">Neha Kumari</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <!-- <li class="nav-item"><a href="#education" class="nav-link">Education</a></li> -->
+                    <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#certificates" class="nav-link">Certificates</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item hidden" id="nav-resume-item"><a href="#" id="nav-view-resume-btn" class="nav-link nav-resume-btn">Resume</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- --- Hero Section --- -->
+        <section id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Hi, I'm Neha Kumari</h1>
+                    <p>Full Stack Web Developer</p>
+                    <p>Clean, efficient, and user-friendly code to build amazing web experiences.</p>
+                    <a href="path/to/your/resume.pdf" download class="btn">Download Resume</a>
+                    <a href="#" id="view-resume-btn" class="btn btn-outline">View Resume</a>
+                    <div class="hero-social-links">
+                        <a href="https://github.com/nehakumari" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/neha-kumari-04ai/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://facebook.com/nehakumari" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image reveal">
+                    <img src="me.jpg" alt="Neha Kumari">
+                </div>
+            </div>
+        </section>
+
+        <!-- --- About Section --- -->
+        <section id="about" class="reveal">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-left">
+                        <img src="me.jpg" alt="Neha Kumari" class="about-img">
+                        <div class="about-info-card">
+                            <ul>
+                                <li><i class="fas fa-graduation-cap"></i> <strong>Education:</strong> MCA Ai & ML</li>
+                                <li><i class="fas fa-phone"></i> <strong>Phone:</strong> +91 96959 56973</li>
+                                <li><i class="fas fa-envelope"></i> <strong>Email:</strong> sneha.sha8178@email.com</li>
+                                <li><i class="fas fa-map-marker-alt"></i> <strong>City:</strong> Jhamshedpur, Jharkhand</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="about-right">
+                        <h3>Neha Kumari</h3>
+                        <p>I am a passionate and detail-oriented Full Stack Web Developer with a Master's in Computer Applications (MCA). I specialize in building robust and scalable web applications from the ground up.</p>
+                        <p>My journey in tech started with a curiosity about how websites work and has evolved into a career where I get to build them every day. I thrive on turning complex problems into simple, beautiful, and intuitive designs.</p>
+                        <p>When I'm not coding, you'll find me exploring new tech blogs, contributing to open-source projects, or enjoying a good cup of coffee. I am committed to writing clean, maintainable code and am always eager to learn and take on new challenges.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- Education Section --- -->
+        <section id="education" class="reveal">
+
+            <div class="container">
+                <h2>My Education</h2>
+                <div class="education-grid">
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="education-details">
+                            <h3>Post Graduation</h3>
+                            <p class="date">2025 - Present</p>
+                            <p><strong>Master of Computer Applications in Artificial Intelligence and Machine Learning (MCA Ai & ML)</strong></p>
+                            <p><em>Lovely Professional University</em></p>
+                            <span class="status">Pursuing</span>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-details">
+                            <h3>Graduation</h3>
+                            <p class="date">2022 - 2025</p>
+                            <p><strong>Bachelor of Computer Applications (BCA)</strong></p>
+                            <p><em>Netaji Subhas University</em></p>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="education-details">
+                            <h3>Intermediate (12th)</h3>
+                            <p class="date">2020 - 2022</p>
+                            <p><strong>Jharkhand Academic Council</strong></p>
+                            <p><em>XYZ Senior Secondary School</em></p>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="education-details">
+                            <h3>Matriculation (10th)</h3>
+                            <p class="date">2019 - 2020</p>
+                            <p><strong>Jharkhand Academic Council</strong></p>
+                            <p><em>XYZ High School</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- --- Experience Section --- -->
+        <section id="experience" class="reveal">
+
+            <div class="container">
+                <h2>My Experience</h2>
+                
+                <div class="timeline">
+                    
+                    <div class="experience-card left" data-type="internship" data-offer-letter="offer_latter.pdf" data-certificate="certificate.pdf" data-employment-type="internship">
+                        <h3>
+                            Python Programming
+                            <span class="employment-type-badge badge-internship">Internship</span>
+                        </h3>
+                        <p class="company">CodSoft | Kolkata, India</p>
+                        <p class="date">August 2024 - September 2024</p>
+                        <ul>
+                            <li>Assisted in development of a company's e-commerce platform.</li>
+                            <li>Fixed bugs and added new features to existing projects.</li>
+                            <li>Gained hands-on experience with Git for version control.</li>
+                        </ul>
+                        <button class="view-docs-btn">
+                            <i class="fas fa-file-pdf"></i> View Documents
+                        </button>
+                    </div>
+                    
+                    <!-- <div class="experience-card right" data-type="job" data-offer-letter="offer_latter.pdf" data-employment-type="full-time">
+                        <h3>
+                            Junior Web Developer
+                            <span class="employment-type-badge badge-full-time">Full-time</span>
+                        </h3>
+                        <p class="company">SoftCode | Kolkata, India</p>
+                        <p class="date">Jan 2022 - Present</p>
+                        <ul>
+                            <li>Developed and maintained 5+ client websites using React.js and Node.js, improving page load speed by 30%.</li>
+                            <li>Collaborated with design team to implement pixel-perfect UI components using Tailwind CSS.</li>
+                            <li>Wrote clean, well-documented, and reusable code.</li>
+                        </ul>
+                        <button class="view-docs-btn">
+                            <i class="fas fa-file-pdf"></i> View Documents
+                        </button>
+                    </div>
+                        
+                    <div class="experience-card left" data-type="freelance" data-contract="freelance-contract.pdf" data-portfolio="freelance-portfolio.pdf" data-employment-type="freelance">
+                        <h3>
+                            Freelance Web Developer
+                            <span class="employment-type-badge badge-freelance">Freelance</span>
+                        </h3>
+                        <p class="company">Self-Employed | Remote</p>
+                        <p class="date">Oct 2020 - May 2021</p>
+                        <ul>
+                            <li>Designed and developed custom websites for 8+ small businesses.</li>
+                            <li>Managed client relationships and project timelines independently.</li>
+                            <li>Implemented responsive design and SEO best practices.</li>
+                        </ul>
+                        <button class="view-docs-btn">
+                            <i class="fas fa-file-pdf"></i> View Documents
+                        </button>
+                    </div>
+                    
+                    <div class="experience-card right" data-type="part-time" data-offer-letter="part-time-offer.pdf" data-employment-type="part-time">
+                        <h3>
+                            Frontend Developer
+                            <span class="employment-type-badge badge-part-time">Part-time</span>
+                        </h3>
+                        <p class="company">TechStart Solutions | Bangalore, India</p>
+                        <p class="date">Aug 2019 - Sep 2020</p>
+                        <ul>
+                            <li>Worked 20 hours per week developing UI components for a SaaS platform.</li>
+                            <li>Collaborated with backend team to integrate RESTful APIs.</li>
+                            <li>Optimized website performance, reducing load time by 25%.</li>
+                        </ul>
+                        <button class="view-docs-btn">
+                            <i class="fas fa-file-pdf"></i> View Documents
+                        </button>
+                    </div> -->
+                
+                </div>
+            
+            </div>
+        
+        </section>
+
+        <!-- --- Skills Section --- -->
+        <section id="skills" class="reveal">
+            <div class="container">
+                <h2>My Skills</h2>
+                <div class="skills-grid">
+
+                    <div class="skill-category-card">
+                        <h3>Programming Languages</h3>
+                        <div class="skills-badges-container">
+                            <span class="skill-badge"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="skill-badge"><i class="fab fa-python"></i> Python</span>
+                            <span class="skill-badge"><i class="fas fa-code"></i> C</span>
+                            <span class="skill-badge"><i class="fas fa-code"></i> C++</span>
+                            <span class="skill-badge"><i class="fas fa-database"></i> SQL</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category-card">
+                        <h3>Frontend</h3>
+                        <div class="skills-badges-container">
+                            <span class="skill-badge"><i class="fab fa-html5"></i> HTML5</span>
+                            <span class="skill-badge"><i class="fab fa-css3-alt"></i> CSS3</span>
+                            <span class="skill-badge"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <h3>Backend</h3>
+                        <div class="skills-badges-container">
+                            <span class="skill-badge"><i class="fas fa-leaf"></i> MongoDB</span>
+                            <span class="skill-badge"><i class="fas fa-database"></i> MySQL</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card">
+                        <h3>Tools & Others</h3>
+                        <div class="skills-badges-container">
+                            <span class="skill-badge"><i class="fab fa-git-alt"></i> Git</span>
+                            <span class="skill-badge"><i class="fab fa-github"></i> GitHub</span>
+                    </div>
+                
+                </div>
+
+            </div>
+        </section>
+
+        <!-- --- Certificates Section --- -->
+        <section id="certificates" class="reveal">
+            <div class="container">
+                
+                <h2>Certifications</h2>
+
+                <div class="certificates-grid">
+                    
+                    <div class="certificate-card" data-pdf="path/to/google-certificate.pdf">
+                        <img src="hackathon.png" alt="Google Cloud Certificate" class="certificate-img">
+                        <div class="certificate-info">
+                            <h3>Announcement Of Winners of HackVerse Hackathon</h3>
+                            <p><strong>Issued by:</strong> HackVerse Hackathon</p>
+                            <p><strong>Issued:</strong> November 2025</p>
+                            <a href="https://unstop.com/certificate-preview/a76a2134-410f-4dc8-b013-b70c058b9cdf" target="_blank" class="credential-link">View Credential</a>
+                        </div>
+                    </div>
+
+                    <div class="certificate-card" data-pdf="path/to/google-certificate.pdf">
+                        <img src="Google.png" alt="Google Cloud Certificate" class="certificate-img">
+                        <div class="certificate-info">
+                            <h3>Gemini Certified University Student</h3>
+                            <p><strong>Issued by:</strong> Google</p>
+                            <p><strong>Issued:</strong> October 2025</p>
+                            <a href="https://edu.google.accredible.com/4e6bdd38-3099-4482-a8c0-77ed1290a19e#acc.C3jhRK1E" target="_blank" class="credential-link">View Credential</a>
+                        </div>
+                    </div>
+
+                    <div class="certificate-card" data-pdf="path/to/meta-certificate.pdf">
+                        <img src="certificate - oracle.png" alt="Meta Front-End Developer Certificate" class="certificate-img">
+                        <div class="certificate-info">
+                            <h3>Meta Front-End Developer Professional Certificate</h3>
+                            <p><strong>Issued by:</strong> Coursera</p>
+                            <p><strong>Issued:</strong> October 2023</p>
+                            <a href="https://www.coursera.org/account/accomplishments/certificate" target="_blank" class="credential-link">View Credential</a>
+                        </div>
+                    </div>
+
+
+                
+                </div>
+            
+            </div>
+        </section>
+
+        <!-- --- Projects Section --- -->
+        <section id="projects" class="reveal">
+            <div class="container">
+                <!-- <h2>Featured Projects</h2> -->
+                <h2> Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="bank.png" alt="Project 1" class="project-img">
+                        <div class="project-info">
+                            <h3>Bank ATM Simulation System</h3>
+                            <p>The Bank ATM Simulation System is a Java console-based application that simulates basic banking operations. 
+                                It allows users to authenticate using a PIN, and perform key actions such as depositing money, withdrawing cash, and checking account balance. 
+                                The system includes error handling for invalid inputs and insufficient balance, providing a realistic ATM experience.</p>
+                            <div class="project-tech-stack">
+                                <span class="tech-badge">Java</span>
+                                <span class="tech-badge">OOP </span>
+                                <!-- <span class="tech-badge">Express</span>
+                                <span class="tech-badge">MongoDB</span>
+                                <span class="tech-badge">Stripe API</span> -->
+                            </div>
+                            <!-- <div class="project-links">
+                                <a href="#" target="_blank">Live Demo</a>
+                                <a href="#" target="_blank">GitHub</a>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="cal.png" alt="Project 2" class="project-img">
+                        <div class="project-info">
+                            <h3>Calculator using JavaScript</h3>
+                            <p>The JavaScript Calculator is a simple yet stylish web-based calculator designed using HTML, CSS, and JavaScript. 
+                                It performs basic arithmetic operations like addition, subtraction, multiplication, and division. 
+                                The calculator features an interactive UI with hover effects, smooth transitions, and modern button design. 
+                                It also supports clear (AC), delete (DE), and decimal input functionality.</p>
+                            <div class="project-tech-stack">
+                                <span class="tech-badge">HTML5 </span>
+                                <span class="tech-badge">CSS3 </span>
+                                <span class="tech-badge">JavaScript</span>
+                                <!-- <span class="tech-badge">Local Storage</span> -->
+                            </div>
+                            <!-- <div class="project-links">
+                                <a href="#" target="_blank">Live Demo</a>
+                                <a href="#" target="_blank">GitHub</a>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="phone.png" alt="Project 3" class="project-img">
+                        <div class="project-info">
+                            <h3>Contact Book Application (C++)</h3>
+                            <p>The Contact Book Application is a C++ console-based project designed to efficiently manage personal or professional contacts. 
+                                It allows users to add, view, search, and delete contacts, with all information stored permanently in a text file. 
+                                The application automatically loads existing contacts at startup and updates the file whenever changes are made.</p>
+                            <div class="project-tech-stack">
+                                <span class="tech-badge">C++</span>
+                                <span class="tech-badge">Vectors</span>
+                                <span class="tech-badge">Loops</span>
+                                <span class="tech-badge">File Handling</span>
+                            </div>
+                            <!-- <div class="project-links">
+                                <a href="#" target="_blank">Live Demo</a>
+                                <a href="#" target="_blank">GitHub</a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- Contact Section --- -->
+        <section id="contact" class="reveal">
+            <div class="container">
+                <h2>Let's Connect</h2>
+                <div class="contact-info">
+                    <p>I'm always open to discussing new opportunities or interesting projects.</p>
+                    <p>Email: <a href="mailto:neha.kumari.email@email.com">neha.kumari@email@email.com</a></p>
+                    <p>LinkedIn: <a href="https://linkedin.com/in/nehakumari" target="_blank">linkedin.com/in/nehakumari</a></p>
+                    <p>GitHub: <a href="https://github.com/nehakumari" target="_blank">github.com/nehakumari</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- --- Resume Modal --- -->
+    <div id="resume-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>My Resume</h2>
+                <a href="path/to/your/resume.pdf" download class="btn">Download PDF</a>
+                <span class="close-modal-btn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <iframe src="path/to/your/resume.pdf"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- --- Image Modal for Certificates --- -->
+    <div id="image-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Certificate</h2>
+                <span class="close-modal-btn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="certificate-modal-content">
+                    <div class="certificate-image-container">
+                        <img id="modal-image" src="" alt="Certificate">
+                    </div>
+                    <div class="certificate-info-container">
+                        <h3 id="modal-cert-title">Certificate Title</h3>
+                        <p><strong>Issued by:</strong> <span id="modal-issuer">Issuer</span></p>
+                        <p><strong>Issued Date:</strong> <span id="modal-date">Date</span></p>
+                        <p><strong>Credential ID:</strong> <span id="modal-id">ID</span></p>
+                        <p><strong>Description:</strong> <span id="modal-description">Certificate description</span></p>
+                        <a id="modal-download-btn" href="#" download class="download-btn">
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --- Experience Documents Modal --- -->
+    <div id="experience-docs-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Experience Documents</h2>
+                <span class="close-modal-btn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="experience-docs-modal-content">
+                    <div class="docs-tabs">
+                        <button class="doc-tab active" data-tab="offer-letter">Offer Letter</button>
+                        <button class="doc-tab" data-tab="certificate">Completion Certificate</button>
+                    </div>
+                    
+                    <div class="doc-content active" id="offer-letter-content">
+                        <div class="doc-pdf-container">
+                            <iframe id="offer-letter-pdf" src="" title="Offer Letter"></iframe>
+                        </div>
+                        <div class="doc-fallback" id="offer-letter-fallback" style="display: none;">
+                            <i class="fas fa-file-pdf"></i>
+                            <p>PDF preview is not available in your browser</p>
+                            <p>Please download the document to view it</p>
+                        </div>
+                        <div class="doc-actions">
+                            <a id="download-offer-letter" href="#" download class="btn">
+                                <i class="fas fa-download"></i> Download Offer Letter
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="doc-content" id="certificate-content">
+                        <div class="doc-pdf-container">
+                            <iframe id="certificate-pdf" src="" title="Completion Certificate"></iframe>
+                        </div>
+                        <div class="doc-fallback" id="certificate-fallback" style="display: none;">
+                            <i class="fas fa-file-pdf"></i>
+                            <p>PDF preview is not available in your browser</p>
+                            <p>Please download the document to view it</p>
+                        </div>
+                        <div class="doc-actions">
+                            <a id="download-certificate" href="#" download class="btn">
+                                <i class="fas fa-download"></i> Download Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --- Footer --- -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Neha Kumari. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- --- Scroll to Top Button --- -->
+    <a href="#home" id="scroll-to-top-btn" class="hidden" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+        // --- Mobile Navigation Toggle ---
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }));
+
+        // --- Modal Logic ---
+        const resumeModal = document.getElementById("resume-modal");
+        const imageModal = document.getElementById("image-modal");
+        const experienceDocsModal = document.getElementById("experience-docs-modal");
+        const viewResumeBtn = document.getElementById("view-resume-btn");
+        const navViewBtn = document.getElementById("nav-view-resume-btn");
+
+        viewResumeBtn.onclick = function(event) {
+            event.preventDefault();
+            openModalWithAnimation(resumeModal);
+        }
+
+        navViewBtn.onclick = function(event) {
+            event.preventDefault();
+            openModalWithAnimation(resumeModal);
+        }
+
+        // --- Open Modal with Animation ---
+        function openModalWithAnimation(modal) {
+            modal.style.display = "flex";
+            // Force a reflow
+            modal.offsetHeight;
+            modal.classList.add("show");
+        }
+
+        // --- Close Modal Logic (Generic for all modals) ---
+        const closeBtns = document.querySelectorAll(".close-modal-btn");
+        closeBtns.forEach(btn => {
+            btn.onclick = function() {
+                closeModalWithAnimation(btn.closest('.modal'));
+            }
+        });
+
+        // --- Close Modal with Animation ---
+        function closeModalWithAnimation(modal) {
+            modal.classList.remove("show");
+            setTimeout(() => {
+                modal.style.display = "none";
+            }, 300); // Match the transition duration
+        }
+
+        // --- Certificate Card Click Logic ---
+        const certCards = document.querySelectorAll(".certificate-card");
+        certCards.forEach(card => {
+            card.addEventListener('click', function() {
+                const imgSrc = card.querySelector('.certificate-img').src;
+                const title = card.querySelector('h3').innerText;
+                const issuer = card.querySelector('p:nth-child(2)').innerText.replace('Issued by: ', '');
+                const date = card.querySelector('p:nth-child(3)').innerText.replace('Issued: ', '');
+                const pdfLink = card.getAttribute('data-pdf');
+                
+                // Populate modal
+                document.getElementById('modal-title').innerText = title;
+                document.getElementById('modal-image').src = imgSrc;
+                document.getElementById('modal-cert-title').innerText = title;
+                document.getElementById('modal-issuer').innerText = issuer;
+                document.getElementById('modal-date').innerText = date;
+                document.getElementById('modal-id').innerText = 'CERT-' + Math.random().toString(36).substr(2, 9).toUpperCase();
+                document.getElementById('modal-description').innerText = 'This certificate validates successful completion of the ' + title + ' program. It demonstrates proficiency in relevant skills and knowledge required for professional practice.';
+                document.getElementById('modal-download-btn').href = pdfLink;
+                
+                openModalWithAnimation(imageModal);
+            });
+        });
+
+        // --- Experience Documents Button Click Logic ---
+        const viewDocsBtns = document.querySelectorAll(".view-docs-btn");
+        viewDocsBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const card = this.closest('.experience-card');
+                const type = card.getAttribute('data-type');
+                const title = card.querySelector('h3').innerText.replace(/\s*<span class="employment-type-badge.*?<\/span>/g, '');
+                const company = card.querySelector('.company').innerText;
+                
+                // Handle different types of experience
+                if (type === 'freelance') {
+                    // For freelance, show contract and portfolio
+                    const contract = card.getAttribute('data-contract');
+                    const portfolio = card.getAttribute('data-portfolio');
+                    
+                    // Update tabs
+                    document.querySelector('#experience-docs-modal .docs-tabs').innerHTML = `
+                        <button class="doc-tab active" data-tab="contract">Contract</button>
+                        <button class="doc-tab" data-tab="portfolio">Portfolio</button>
+                    `;
+                    
+                    // Update content
+                    document.querySelector('#experience-docs-modal .modal-body').innerHTML = `
+                        <div class="experience-docs-modal-content">
+                            <div class="docs-tabs">
+                                <button class="doc-tab active" data-tab="contract">Contract</button>
+                                <button class="doc-tab" data-tab="portfolio">Portfolio</button>
+                            </div>
+                            
+                            <div class="doc-content active" id="contract-content">
+                                <div class="doc-pdf-container">
+                                    <iframe id="contract-pdf" src="${contract}" title="Contract"></iframe>
+                                </div>
+                                <div class="doc-fallback" id="contract-fallback" style="display: none;">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <p>PDF preview is not available in your browser</p>
+                                    <p>Please download the document to view it</p>
+                                </div>
+                                <div class="doc-actions">
+                                    <a id="download-contract" href="${contract}" download class="btn">
+                                        <i class="fas fa-download"></i> Download Contract
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="doc-content" id="portfolio-content">
+                                <div class="doc-pdf-container">
+                                    <iframe id="portfolio-pdf" src="${portfolio}" title="Portfolio"></iframe>
+                                </div>
+                                <div class="doc-fallback" id="portfolio-fallback" style="display: none;">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <p>PDF preview is not available in your browser</p>
+                                    <p>Please download the document to view it</p>
+                                </div>
+                                <div class="doc-actions">
+                                    <a id="download-portfolio" href="${portfolio}" download class="btn">
+                                        <i class="fas fa-download"></i> Download Portfolio
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    // Re-attach event listeners for new elements
+                    attachTabEventListeners();
+                    setupPDFViewers();
+                } else {
+                    // For other types, show offer letter and possibly certificate
+                    const offerLetter = card.getAttribute('data-offer-letter');
+                    const certificate = card.getAttribute('data-certificate');
+                    
+                    // Update tabs based on whether certificate exists
+                    let tabsHTML = '<button class="doc-tab active" data-tab="offer-letter">Offer Letter</button>';
+                    if (type === 'internship' && certificate) {
+                        tabsHTML += '<button class="doc-tab" data-tab="certificate">Completion Certificate</button>';
+                    }
+                    
+                    // Update content based on document type
+                    let contentHTML = `
+                        <div class="experience-docs-modal-content">
+                            <div class="docs-tabs">
+                                ${tabsHTML}
+                            </div>
+                            
+                            <div class="doc-content active" id="offer-letter-content">
+                                <div class="doc-pdf-container">
+                                    <iframe id="offer-letter-pdf" src="${offerLetter}" title="Offer Letter"></iframe>
+                                </div>
+                                <div class="doc-fallback" id="offer-letter-fallback" style="display: none;">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <p>PDF preview is not available in your browser</p>
+                                    <p>Please download the document to view it</p>
+                                </div>
+                                <div class="doc-actions">
+                                    <a id="download-offer-letter" href="${offerLetter}" download class="btn">
+                                        <i class="fas fa-download"></i> Download Offer Letter
+                                    </a>
+                                </div>
+                            </div>
+                    `;
+                    
+                    if (type === 'internship' && certificate) {
+                        contentHTML += `
+                            <div class="doc-content" id="certificate-content">
+                                <div class="doc-pdf-container">
+                                    <iframe id="certificate-pdf" src="${certificate}" title="Completion Certificate"></iframe>
+                                </div>
+                                <div class="doc-fallback" id="certificate-fallback" style="display: none;">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <p>PDF preview is not available in your browser</p>
+                                    <p>Please download the document to view it</p>
+                                </div>
+                                <div class="doc-actions">
+                                    <a id="download-certificate" href="${certificate}" download class="btn">
+                                        <i class="fas fa-download"></i> Download Certificate
+                                    </a>
+                                </div>
+                            </div>
+                        `;
+                    }
+                    
+                    contentHTML += '</div>';
+                    
+                    document.querySelector('#experience-docs-modal .modal-body').innerHTML = contentHTML;
+                    
+                    // Re-attach event listeners for new elements
+                    attachTabEventListeners();
+                    setupPDFViewers();
+                }
+                
+                // Update modal title
+                document.querySelector('#experience-docs-modal .modal-header h2').innerText = 
+                    `${title} - ${company}`;
+                
+                openModalWithAnimation(experienceDocsModal);
+            });
+        });
+
+        // --- Setup PDF Viewers ---
+        function setupPDFViewers() {
+            const iframes = document.querySelectorAll('.doc-pdf-container iframe');
+            
+            iframes.forEach(iframe => {
+                // Check if PDF can be loaded
+                iframe.onload = function() {
+                    // If PDF loads successfully, hide fallback
+                    const fallbackId = iframe.id.replace('-pdf', '-fallback');
+                    const fallback = document.getElementById(fallbackId);
+                    if (fallback) {
+                        fallback.style.display = 'none';
+                    }
+                };
+                
+                iframe.onerror = function() {
+                    // If PDF fails to load, show fallback
+                    const container = iframe.parentElement;
+                    const fallbackId = iframe.id.replace('-pdf', '-fallback');
+                    const fallback = document.getElementById(fallbackId);
+                    
+                    if (fallback) {
+                        iframe.style.display = 'none';
+                        fallback.style.display = 'flex';
+                    }
+                };
+            });
+        }
+
+        // --- Experience Documents Tab Switching ---
+        function attachTabEventListeners() {
+            const docTabs = document.querySelectorAll('.doc-tab');
+            docTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    
+                    // Update active tab
+                    document.querySelectorAll('.doc-tab').forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Update active content
+                    document.querySelectorAll('.doc-content').forEach(content => content.classList.remove('active'));
+                    document.getElementById(`${tabId}-content`).classList.add('active');
+                });
+            });
+        }
+
+        // --- Download certificate button click ---
+        document.getElementById('modal-download-btn').addEventListener('click', function(e) {
+            e.stopPropagation();
+            // The download will be handled by the browser due to the download attribute
+        });
+
+        // --- Close modal when clicking outside ---
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                closeModalWithAnimation(event.target);
+            }
+        }
+
+        // --- Dynamic Navbar, Resume & Scroll to Top Button Logic ---
+        const homeSection = document.getElementById('home');
+        const navResumeItem = document.getElementById('nav-resume-item');
+        const scrollToTopBtn = document.getElementById('scroll-to-top-btn');
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            const homeSectionHeight = homeSection.offsetHeight;
+
+            if (scrollPosition > homeSectionHeight - 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            if (scrollPosition > homeSectionHeight - 100) {
+                navResumeItem.classList.remove('hidden');
+            } else {
+                navResumeItem.classList.add('hidden');
+            }
+
+            if (scrollPosition > 300) {
+                scrollToTopBtn.classList.remove('hidden');
+            } else {
+                scrollToTopBtn.classList.add('hidden');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // --- Scroll Reveal Animation ---
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+
+</body>
+</html>
