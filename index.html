@@ -1068,6 +1068,37 @@
             transform: translateY(0);
         }
 
+        /* --- Resume Modal Specific Styles --- */
+        #resume-modal .modal-body {
+            padding: 0;
+            height: 80vh; 
+            overflow: hidden; 
+        }
+
+        #resume-modal .modal-body iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 0 0 10px 10px; 
+        }
+
+        #resume-modal .modal-content {
+            height: 90vh; 
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #resume-modal .modal-header {
+            flex-shrink: 0; 
+        }
+
+        #resume-modal .modal-body {
+            flex-grow: 1; 
+            display: flex;
+            flex-direction: column;
+        }
+
         /* --- Responsive Design --- */
         @media (max-width: 768px) {
             h2 { font-size: 2rem; }
@@ -1189,6 +1220,15 @@
             .doc-pdf-container {
                 height: 60vh;
             }
+
+             #resume-modal .modal-content {
+                height: 95vh; 
+                max-height: 95vh;
+            }
+            
+            #resume-modal .modal-body {
+                height: 75vh; 
+            }
         }
 
     </style>
@@ -1228,12 +1268,12 @@
                     <h1>Hi, I'm Neha Kumari</h1>
                     <p>Full Stack Web Developer</p>
                     <p>Clean, efficient, and user-friendly code to build amazing web experiences.</p>
-                    <a href="path/to/your/resume.pdf" download class="btn">Download Resume</a>
+                    <a href="./resume.pdf" download class="btn">Download Resume</a>
                     <a href="#" id="view-resume-btn" class="btn btn-outline">View Resume</a>
                     <div class="hero-social-links">
-                        <a href="https://github.com/nehakumari" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/Sneha-kumari8178" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/neha-kumari-04ai/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://facebook.com/nehakumari" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <!-- <a href="https://facebook.com/nehakumari" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> -->
                     </div>
                 </div>
                 <div class="hero-image reveal">
@@ -1348,57 +1388,6 @@
                             <i class="fas fa-file-pdf"></i> View Documents
                         </button>
                     </div>
-                    
-                    <!-- <div class="experience-card right" data-type="job" data-offer-letter="offer_latter.pdf" data-employment-type="full-time">
-                        <h3>
-                            Junior Web Developer
-                            <span class="employment-type-badge badge-full-time">Full-time</span>
-                        </h3>
-                        <p class="company">SoftCode | Kolkata, India</p>
-                        <p class="date">Jan 2022 - Present</p>
-                        <ul>
-                            <li>Developed and maintained 5+ client websites using React.js and Node.js, improving page load speed by 30%.</li>
-                            <li>Collaborated with design team to implement pixel-perfect UI components using Tailwind CSS.</li>
-                            <li>Wrote clean, well-documented, and reusable code.</li>
-                        </ul>
-                        <button class="view-docs-btn">
-                            <i class="fas fa-file-pdf"></i> View Documents
-                        </button>
-                    </div>
-                        
-                    <div class="experience-card left" data-type="freelance" data-contract="freelance-contract.pdf" data-portfolio="freelance-portfolio.pdf" data-employment-type="freelance">
-                        <h3>
-                            Freelance Web Developer
-                            <span class="employment-type-badge badge-freelance">Freelance</span>
-                        </h3>
-                        <p class="company">Self-Employed | Remote</p>
-                        <p class="date">Oct 2020 - May 2021</p>
-                        <ul>
-                            <li>Designed and developed custom websites for 8+ small businesses.</li>
-                            <li>Managed client relationships and project timelines independently.</li>
-                            <li>Implemented responsive design and SEO best practices.</li>
-                        </ul>
-                        <button class="view-docs-btn">
-                            <i class="fas fa-file-pdf"></i> View Documents
-                        </button>
-                    </div>
-                    
-                    <div class="experience-card right" data-type="part-time" data-offer-letter="part-time-offer.pdf" data-employment-type="part-time">
-                        <h3>
-                            Frontend Developer
-                            <span class="employment-type-badge badge-part-time">Part-time</span>
-                        </h3>
-                        <p class="company">TechStart Solutions | Bangalore, India</p>
-                        <p class="date">Aug 2019 - Sep 2020</p>
-                        <ul>
-                            <li>Worked 20 hours per week developing UI components for a SaaS platform.</li>
-                            <li>Collaborated with backend team to integrate RESTful APIs.</li>
-                            <li>Optimized website performance, reducing load time by 25%.</li>
-                        </ul>
-                        <button class="view-docs-btn">
-                            <i class="fas fa-file-pdf"></i> View Documents
-                        </button>
-                    </div> -->
                 
                 </div>
             
@@ -1503,6 +1492,7 @@
                 <!-- <h2>Featured Projects</h2> -->
                 <h2> Projects</h2>
                 <div class="projects-grid">
+
                     <div class="project-card">
                         <img src="./Images/Projects/bank.png" alt="Project 1" class="project-img">
                         <div class="project-info">
@@ -1513,16 +1503,11 @@
                             <div class="project-tech-stack">
                                 <span class="tech-badge">Java</span>
                                 <span class="tech-badge">OOP </span>
-                                <!-- <span class="tech-badge">Express</span>
-                                <span class="tech-badge">MongoDB</span>
-                                <span class="tech-badge">Stripe API</span> -->
                             </div>
-                            <!-- <div class="project-links">
-                                <a href="#" target="_blank">Live Demo</a>
-                                <a href="#" target="_blank">GitHub</a>
-                            </div> -->
+                          
                         </div>
                     </div>
+                
                     <div class="project-card">
                         <img src="./Images/Projects/cal.png" alt="Project 2" class="project-img">
                         <div class="project-info">
@@ -1535,14 +1520,15 @@
                                 <span class="tech-badge">HTML5 </span>
                                 <span class="tech-badge">CSS3 </span>
                                 <span class="tech-badge">JavaScript</span>
-                                <!-- <span class="tech-badge">Local Storage</span> -->
+                                
                             </div>
-                            <!-- <div class="project-links">
-                                <a href="#" target="_blank">Live Demo</a>
-                                <a href="#" target="_blank">GitHub</a>
-                            </div> -->
+                            <div class="project-links">
+                                <!-- <a href="#" target="_blank">Live Demo</a> -->
+                                <a href="https://github.com/Sneha-kumari8178/Calculator-using-JavaScript.git" target="_blank">GitHub</a>
+                            </div>
                         </div>
                     </div>
+                
                     <div class="project-card">
                         <img src="./Images/Projects/phone.png" alt="Project 3" class="project-img">
                         <div class="project-info">
@@ -1562,6 +1548,28 @@
                             </div> -->
                         </div>
                     </div>
+
+                    <div class="project-card">
+                        <img src="./Images/Projects/todo.png" alt="Project 3" class="project-img">
+                        <div class="project-info">
+                            <h3>TaskFlow - Modern Todo List Web App</h3>
+                            <p>TaskFlow is a modern and responsive Todo List Web Application designed to help users manage their daily tasks efficiently. 
+                                It allows users to add, edit, delete, and filter tasks with ease. 
+                                The app features a clean UI, smooth animations, real-time statistics, and progress tracking, making task management more interactive.
+                                All tasks are stored securely using LocalStorage, ensuring data remains saved even after page refresh.</p>
+                            <div class="project-tech-stack">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript (Vanilla JS)</span>
+                                <span >LocalStorage - Client-side data storage</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://todos-task-flow.vercel.app/" target="_blank">Live Demo</a>
+                                <!-- <a href="https://github.com/Sneha-kumari8178/TaskFlow.git" target="_blank">GitHub</a> -->
+                            </div>
+                        </div>
+                    </div>
+                
                 </div>
             </div>
         </section>
@@ -1572,9 +1580,9 @@
                 <h2>Let's Connect</h2>
                 <div class="contact-info">
                     <p>I'm always open to discussing new opportunities or interesting projects.</p>
-                    <p>Email: <a href="mailto:neha.kumari.email@email.com">neha.kumari@email@email.com</a></p>
-                    <p>LinkedIn: <a href="https://linkedin.com/in/nehakumari" target="_blank">linkedin.com/in/nehakumari</a></p>
-                    <p>GitHub: <a href="https://github.com/nehakumari" target="_blank">github.com/nehakumari</a></p>
+                    <p>Email: <a href="mailto:sneha.sha8178@email.com">neha.kumari@email@email.com</a></p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/neha-kumari-04ai/" target="_blank">linkedin.com/in/nehakumari</a></p>
+                    <p>GitHub: <a href="https://github.com/Sneha-kumari8178" target="_blank">github.com/nehakumari</a></p>
                 </div>
             </div>
         </section>
@@ -1585,11 +1593,11 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h2>My Resume</h2>
-                <a href="path/to/your/resume.pdf" download class="btn">Download PDF</a>
+                <a href="./resume.pdf" download class="btn">Download PDF</a>
                 <span class="close-modal-btn">&times;</span>
             </div>
             <div class="modal-body">
-                <iframe src="path/to/your/resume.pdf"></iframe>
+                <iframe src="./resume.pdf"></iframe>
             </div>
         </div>
     </div>
